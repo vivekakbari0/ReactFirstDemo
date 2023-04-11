@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import HandleInput from "./HandleInput";
 
 function BasicForm() {
@@ -13,6 +13,8 @@ function BasicForm() {
   const [birthPlace, setbirthPlace] = useState("");
   const [MobileNum, setMobileNum] = useState("");
   const [Image, setImage] = useState(null);
+ 
+  const fileRef = useRef(null);
 
   const [formIsValid, setfromIsValid] = useState(false);
 
@@ -126,7 +128,7 @@ function BasicForm() {
       }
 
       // reset the Value
-      setImage(null);
+      setImage(fileRef.current.value = "");
       setFirstName("");
       setLastName("");
       setCurrentAddress("");
@@ -320,6 +322,8 @@ function BasicForm() {
           <label className="mr-2" htmlFor="Profile_pic">Profile Picture : </label>
           <input
             type="file"
+            accept="image/png, image/jpg, image/jpeg"
+            ref={fileRef}
             onChange={imageChangeHandler}
           />
         </div>
