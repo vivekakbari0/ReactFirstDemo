@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
-import HandleInput from "./HandleInput";
+import Table from "./Table";
 
-function BasicForm() {
+function Form() {
 
   const [formData, setFormData] = useState([]);
 
@@ -340,7 +340,7 @@ function BasicForm() {
         </div>
       </form>
     </div>
-      <HandleInput
+      <Table
         formData={formData}
         deleteHandler={deleteHandler}
         updateHandler={updateHandler}
@@ -348,4 +348,4 @@ function BasicForm() {
     </>
   );
 }
-export default BasicForm;
+export default Form;

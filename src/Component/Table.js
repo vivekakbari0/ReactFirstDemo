@@ -1,6 +1,6 @@
 import React from "react";
 
-function HandleInput(props) {
+function Table(props) {
   const { formData, updateHandler, deleteHandler } = props;
 
   return (
@@ -79,10 +79,10 @@ function HandleInput(props) {
           </td>
         </tr>
       ))}
-    </tbody>
+    </tbody>,
     </table>
     </div>
   );
 }
 
-export default HandleInput;
+export default Table;
