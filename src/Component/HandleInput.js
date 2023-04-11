@@ -36,11 +36,13 @@ function HandleInput(props) {
       {formData.map((data, index) => (
         <tr className=" font-bold text-black" key={index}>
           <td className="border-2 border-black">
+            <div className=" flex justify-center">
             <img
               src={data.Image}
               alt=""
               style={{ width: "100px", height: "100px" }}
             />
+            </div>
           </td>
           <td className="border-2 border-black w-40">
             {data.firstName} {data.lastName}
